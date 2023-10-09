@@ -25,13 +25,15 @@ const TopMenu = () => (<Navbar bg="light" expand="lg">
     </Container>
 </Navbar>);
 
-const IslandSnowLogo = () => (<Col className={"justify-content-center pt-3"}>
-    <Image src={"experience-islandsnow-bootstrap-logo.png"} className={"img-fluid rounded mx-auto d-block py-1"}
-           width={"250px"}></Image>
-</Col>);
+const IslandSnowLogo = () => (<Container fluid>
+    <Col className={"justify-content-center pt-3"}>
+        <Image src={"experience-islandsnow-bootstrap-logo.png"} className={"img-fluid rounded mx-auto d-block py-1"}
+               width={"250px"}></Image>
+    </Col>
+</Container>);
 
 const MiddleMenu = () => (<Navbar className={"pt-3"}>
-    <Container className={"justify-content-center black-text fw-bold"}>
+    <Container fluid className={"justify-content-center black-text fw-bold"}>
         <Nav className={"gap-3"}>
             <NavDropdown title={"MEN"}>
                 <NavDropdown.Item></NavDropdown.Item>
@@ -54,57 +56,49 @@ const MiddleMenu = () => (<Navbar className={"pt-3"}>
     </Container>
 </Navbar>);
 
-const FullWidthImage = () => (<Col className={"justify-content-center"}>
-    <Image src={"experience-islandsnow-bootstrap-main.png"} className={"img-fluid"}></Image>
-</Col>);
+const FullWidthImage = () => (<div className={"image"}></div>);
 
-const FooterMenu = () => (
-    <Container className={"p-5 footer"}>
-        <Row>
-            <Col>
-                <h2>NAVIGATION</h2>
-                <hr/>
-                <p>About Us</p>
-                <p>Employment</p>
-                <p>Videos</p>
-            </Col>
-            <Col>
-                <h2>MAIN MENU</h2>
-                <hr/>
-                <p>Men</p>
-                <p>Women</p>
-                <p>Kids</p>
-            </Col>
-            <Col>
-                <h2>CONNECT</h2>
-                <hr/>
-                <p>Sign up for the latest updates</p>
-                <InputGroup className="mb-3">
-                    <Form.Control
-                        placeholder="Enter Email Address"
-                        aria-label="email address"
-                        aria-describedby="basic-addon2"
-                    />
-                    <Button variant="outline-light" id="button-addon2">
-                        Join
-                    </Button>
-                </InputGroup>
-            </Col>
-        </Row>
-    </Container>
-);
+const FooterMenu = () => (<Container fluid className={"p-5 footer"}>
+    <Row>
+        <Col>
+            <h2>NAVIGATION</h2>
+            <hr/>
+            <p>About Us</p>
+            <p>Employment</p>
+            <p>Videos</p>
+        </Col>
+        <Col>
+            <h2>MAIN MENU</h2>
+            <hr/>
+            <p>Men</p>
+            <p>Women</p>
+            <p>Kids</p>
+        </Col>
+        <Col>
+            <h2>CONNECT</h2>
+            <hr/>
+            <p>Sign up for the latest updates</p>
+            <InputGroup className="mb-3">
+                <Form.Control
+                    placeholder="Enter Email Address"
+                    aria-label="email address"
+                    aria-describedby="basic-addon2"
+                />
+                <Button variant="outline-light" id="button-addon2">
+                    Join
+                </Button>
+            </InputGroup>
+        </Col>
+    </Row>
+</Container>);
 
-const IslandSnow = () => (
-    <Container>
-        <TopMenu/>
-        <IslandSnowLogo/>
-        <MiddleMenu/>
-        <FullWidthImage/>
-        <FooterMenu/>
-    </Container>
-);
+const IslandSnow = () => (<Container fluid>
+    <TopMenu/>
+    <IslandSnowLogo/>
+    <MiddleMenu/>
+    <FullWidthImage/>
+    <FooterMenu/>
+</Container>);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <IslandSnow/>
-);
+root.render(<IslandSnow/>);

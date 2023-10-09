@@ -6,3 +6,10 @@
     background-color: #292929;
     color: white;
 }
+
+.image {
+    background: url("../public/experience-islandsnow-bootstrap-main.png") no-repeat center;
+    background-size: cover;
+    height: 60vh;
+    width: 100%;
+}
