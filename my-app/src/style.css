@@ -1,5 +1,6 @@
-.black-text {
-    color: black;
+.middle-menu {
+    --bs-navbar-color: black;
+    --bs-nav-link-font-weight: 700;
 }
 
 .footer {

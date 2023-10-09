@@ -31,8 +31,8 @@ const IslandSnowLogo = () => (<Col className={"justify-content-center pt-3"}>
 </Col>);
 
 const MiddleMenu = () => (<Navbar className={"pt-3"}>
-    <Container className={"justify-content-center black-text fw-bold"}>
-        <Nav className={"gap-3"}>
+    <Container className={"justify-content-center"}>
+        <Nav className={"gap-3 middle-menu"}>
             <NavDropdown title={"MEN"}>
                 <NavDropdown.Item></NavDropdown.Item>
                 <NavDropdown.ItemText>Nothing</NavDropdown.ItemText>
